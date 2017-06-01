@@ -1220,8 +1220,8 @@ static bool arp_seq_switch_active(void) {
 	arp_seq_t *last_seq;
 	bool switched = false;
 
-	// disable timer interrupts
-	timers_pause();
+	// disable interrupts
+	u8 irq_flags = irqs_pause();
 
 	if (next_seq->state == eSeqWaiting) {
 		next_seq->state = eSeqPlaying;
@@ -1233,7 +1233,7 @@ static bool arp_seq_switch_active(void) {
 	}
 
 	// enable timer interrupts
-	timers_resume();
+	irqs_resume(irq_flags);
 
 	return switched;
 }
