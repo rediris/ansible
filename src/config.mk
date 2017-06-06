@@ -69,7 +69,6 @@ CSRCS = \
        ../src/ansible_arc.c    \
        ../src/ansible_midi.c    \
        ../src/ansible_tt.c    \
-       ../libavr32/conf/conf_tc_irq.c     \
        ../libavr32/src/adc.c     \
        ../libavr32/src/arp.c     \
        ../libavr32/src/dac.c     \
@@ -79,6 +78,7 @@ CSRCS = \
        ../libavr32/src/i2c.c     \
        ../libavr32/src/init_ansible.c \
        ../libavr32/src/init_common.c \
+       ../libavr32/src/interrupts.c \
        ../libavr32/src/midi_common.c \
        ../libavr32/src/monome.c \
        ../libavr32/src/music.c \

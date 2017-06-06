@@ -8,6 +8,7 @@
 #include "notes.h"
 #include "timers.h"
 #include "util.h"
+#include "interrupts.h"
 
 #include "monome.h"
 #include "ii.h"
